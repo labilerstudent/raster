@@ -1,0 +1,129 @@
+float r = 10;
+float r2 = 5;
+
+void setup() {
+  size(900,900);
+  background(40);
+;
+
+  
+}
+
+void draw(){
+    
+//objekte
+  noStroke();
+fill(180,20,180);
+  all(0,0);
+ 
+ fill(100,20,100);
+  all( 10,10);
+  
+  fill(255);
+  all(20,20);
+  
+  //rahmen
+
+  
+  stroke(255);
+  strokeWeight(10);
+  line(0,300,900,300);
+  line(300,0,300,900);
+  line(300,0,300,900);
+  line(600,0,600,900);
+  line(0,600,900,600);
+  
+  save("Aufgabe3.jpeg");
+  
+}
+
+//
+
+
+void all(float x, float y){
+ 
+
+    circleRectx4(x+50,y+50);
+  circleRectx4(x+100,y+100); 
+  circleRectx4(x+150,y+100);
+  circleRectx4(x+00,y+00);
+  
+  circleRectx4(x+50,y+50);
+  circleRectx4(x+100,y+100); 
+  circleRectx4(x+150,y+100);
+  circleRectx4(x+00,y+00);
+  
+ 
+  
+  quadlife(x+50,y+50,x+50,y+150,x+150,y+150,x+150,y+50);
+  quadlife(x+150,y+250,x+150,y+150,x+250,y+150,x+250,y+100);
+}
+  
+
+void circles(float x,float y,float r){
+ 
+  circle(x,y,r);
+  circle(x,y+15,r);
+  circle(x,y+30,r);
+  circle(x,y+45,r);
+  circle(x,y+60,r);
+  circle(x,y+75,r);
+  circle(x,y+90,r);
+  circle(x,y+105,r);
+  circle(x,y+120,r);
+  
+}
+
+void circleRect(float x, float y){
+ 
+  circles(x,y,r);
+  circles(x+15,y,r);
+  circles(x+30,y,r);
+  circles(x+45,y,r);
+  circles(x+60,y,r);
+  circles(x+75,y,r);
+  circles(x+90,y,r);
+  circles(x+105,y,r);
+  circles(x+120,y,r);
+  
+    circles(x,y,r2);
+  circles(x+15,y,r2);
+  circles(x+30,y,r2);
+  circles(x+45,y,r2);
+  circles(x+60,y,r2);
+  circles(x+75,y,r2);
+  circles(x+90,y,r2);
+  circles(x+105,y,r2);
+  circles(x+120,y,r2);
+  
+}
+
+void circleRectx4(float x, float y){
+  
+  
+  
+  circleRect(x,y);
+  circleRect(x+300,y);
+  circleRect(x,y+300);
+  circleRect(x+300,y+300);
+  circleRect(x+600,y+600);
+  circleRect(x+600,y);
+  circleRect(x,y+600);
+  circleRect(x+600,y+300);
+  circleRect(x+300,y+600);
+}
+
+void quadlife(float x1, float y1, float x2, float y2, float x3, float y3,float x4,float y4){
+noStroke();
+
+quad(x1,y1,x2,y2,x3,y3,x4,y4);
+quad(x1+300,y1,x2+300,y2,x3+300,y3,x4+300,y4);
+quad(x1,y1+300,x2,y2+300,x3,y3+300,x4,y4+300);
+quad(x1,y1+600,x2,y2+600,x3,y3+600,x4,y4+600);
+quad(x1+600,y1,x2+600,y2,x3+600,y3,x4+600,y4);
+quad(x1+300,y1+300,x2+300,y2+300,x3+300,y3+300,x4+300,y4+300);
+quad(x1+300,y1+600,x2+300,y2+600,x3+300,y3+600,x4+300,y4+600);
+quad(x1+600,y1+300,x2+600,y2+300,x3+600,y3+300,x4+600,y4+300);
+quad(x1+600,y1+600,x2+600,y2+600,x3+600,y3+600,x4+600,y4+600);
+
+}
