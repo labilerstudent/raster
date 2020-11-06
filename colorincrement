@@ -1,0 +1,27 @@
+
+  
+color fillcolour=0;
+float colourincrement=1;
+float colourincrement2=-0.5;
+
+void setup() { 
+size(400, 400); 
+colorMode(HSB, 360, 100, 100); 
+background(180); 
+frameRate(60); 
+}
+
+void draw(){
+  
+
+noStroke();
+fillcolour+=colourincrement;
+fill(fillcolour, 255, 255);
+rect(mouseX,mouseY,50,50);
+
+if (fillcolour==255 || fillcolour==0){
+  colourincrement*=-1;
+
+}
+
+}
