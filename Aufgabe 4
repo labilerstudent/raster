@@ -1,0 +1,49 @@
+ PShape s;
+int red = 60;
+int green = 10;
+int blue = 80;
+
+void setup() {
+  
+  background(15);
+  loop();
+  size(1000,1000);
+  s = loadShape("riot.svg");
+noLoop();
+}
+
+
+void draw() {
+  background(15);
+
+  for (int x = 0; x < 1000; x += 100){
+for (int y = 0; y < 1000; y += 100 ){
+
+
+  
+    noFill();
+    stroke(255);
+    strokeWeight(4);
+    rect(0,0,100,100);
+    noStroke();
+    fill(red,green,blue);
+    rect(x+20,y+20,40,70);
+    fill(255);
+    rect(x,y,50,90);
+    fill(red+100,green,blue+50,127);
+    ellipse(x+60,y+50,30,30);
+    shape(s, x-15, y+8, 80, 80);
+    
+    
+  red=red+3;
+  blue=blue+10;
+  green=green;   
+  
+}
+    
+    
+
+  }
+  save("Aufgabe_4.jpeg");
+  
+}
